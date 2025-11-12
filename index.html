@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havvanur - Kişisel Site</title>
+
+    <style>
+        /* 🔹 Genel sayfa ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #333;
+            text-align: center;
+            scroll-behavior: smooth;
+            animation: fadeIn 1.2s ease;
+            background: linear-gradient(-45deg, #f5f5ff, #eaeaff, #fdfaff, #e7f0ff);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        nav {
+            background-color: rgba(108, 99, 255, 0.9);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 8px 14px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #6C63FF;
+            transform: scale(1.1);
+        }
+
+        header {
+            padding: 60px 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-bottom: 2px solid #dcdcff;
+            transition: background 0.5s ease;
+        }
+
+        header img {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 15px;
+            box-shadow: 0 0 10px #ccc;
+            transition: transform 0.4s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s forwards;
+            transition: background 0.6s, color 0.6s;
+        }
+
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 { color: #6C63FF; }
+        ul { list-style: none; padding: 0; font-size: 18px; }
+
+        /* 🔹 Hobiler görsellerle */
+        .hobi-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .hobi-list li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 120px;
+            text-align: center;
+        }
+
+        .hobi-list img {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            margin-top: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hobi-list img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* 🔹 Buton */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #6C63FF;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #514ad4;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: rgba(108, 99, 255, 0.9);
+            color: white;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        a { color: #6C63FF; text-decoration: none; }
+        * { transition: background 0.6s, color 0.6s; }
+    </style>
+</head>
+<body>
+
+    <!-- 🔸 Menü -->
+    <nav>
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#hobiler">Hobilerim</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <!-- 🔸 Başlık -->
+    <header>
+        <h1>Hoşgeldin! Ben Havvanur </h1>
+        <p>HTML öğreniyorum — bu sade, renk geçişli kişisel web sitem!</p>
+    </header>
+
+    <!-- 🔸 Hakkımda -->
+    <section id="hakkimda">
+        <h2>Hakkımda</h2>
+        <p>Ben Havvanur, teknolojiye ve yazılıma meraklı bir öğrenciyim. 
+           Boş zamanlarımda müzik dinler, film izler, kitap okur ve HTML/CSS ile ilgili yeni şeyler öğrenirim.</p>
+    </section>
+
+    <!-- 🔸 Hobiler -->
+    <section id="hobiler">
+        <h2>Hobilerim</h2>
+        <ul class="hobi-list">
+            <li>
+                🎬 Film izlemek
+                <img src="https://cdn-icons-png.flaticon.com/512/4221/4221419.png" alt="Film izleme">
+            </li>
+            <li>
+                🎵 Müzik dinlemek
+                <img src="https://cdn-icons-png.flaticon.com/512/9037/9037459.png" alt="Müzik dinleme">
+            </li>
+            <li>
+                💻 Web tasarımı öğrenmek
+                <img src="https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX44121463.jpg" alt="Web tasarımı">
+            </li>
+            <li>
+                📚 Kitap okumak
+                <img src="https://cdn-icons-png.flaticon.com/512/3574/3574808.png" alt="Kitap okuma">
+            </li>
+        </ul>
+    </section>
+
+    <!-- 🔸 İletişim -->
+    <section id="iletisim">
+        <h2>İletişim</h2>
+        <p>Bana e-posta göndermek istersen:</p>
+        <p><a href="mailto:cobanozhavvanur9@gmail.com">cobanozhavvanur9@gmail.com</a></p>
+        <a href="mailto:cobanozhavvanur9@gmail.com" class="btn">📧 E-Posta Gönder</a>
+    </section>
+
+    <!-- 🔸 Alt bilgi -->
+    <footer>
+        <p>© 2025 | Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
